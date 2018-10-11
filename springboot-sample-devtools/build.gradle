@@ -1,0 +1,14 @@
+description '''spring-boot devtools sample for 1.5.16
+features:
+1. restart trigger file
+2. livereload of chrome
+it's not work very well in Idea, but if you edit gradle config, it will done.
+'''
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok'
+
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.springframework.boot:spring-boot-devtools'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}

@@ -1,0 +1,57 @@
+buildscript {
+    ext.dependencyManagementPluginVersion = '1.0.6.RELEASE'
+    ext.platformBomVersion = 'Cairo-SR4'
+    ext.springBootVersion = '2.0.5.RELEASE'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:${dependencyManagementPluginVersion}"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+}
+
+group 'my.norxiva'
+version '1.0-SNAPSHOT'
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+    apply plugin: 'maven'
+
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
+
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+
+//    dependencyManagement {
+//        imports {
+//            mavenBom "io.spring.platform:platform-bom:${platformBomVersion}"
+//        }
+//    }
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+
+
+configure(subprojects.findAll() { it.name ==~ /springboot-sample.*/ }) {
+    ext.platformBomVersion = 'Brussels-SR13'
+    ext.springBootVersion = '1.5.16.RELEASE'
+//    ext.platformBomVersion = 'Cairo-SR4'
+//    ext.springBootVersion = '2.0.5.RELEASE'
+
+    dependencyManagement {
+        imports {
+            mavenBom "io.spring.platform:platform-bom:${platformBomVersion}"
+        }
+    }
+
+}

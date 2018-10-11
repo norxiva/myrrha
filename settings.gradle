@@ -1,0 +1,3 @@
+rootProject.name = 'myrrha'
+include 'springboot-sample-devtools'
+
