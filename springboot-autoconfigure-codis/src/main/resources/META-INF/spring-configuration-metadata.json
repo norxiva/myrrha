@@ -1,0 +1,69 @@
+{
+  "groups": [
+    {
+      "name": "spring.redis.jodis",
+      "type": "org.springframework.boot.autoconfigure.data.redis.JodisProperties",
+      "sourceType": "org.springframework.boot.autoconfigure.data.redis.JodisProperties"
+    },
+    {
+      "name": "spring.cache.cache.extra",
+      "type": "org.springframework.boot.autoconfigure.cache.RedisCacheExtraProperties",
+      "sourceType": "org.springframework.boot.autoconfigure.cache.RedisCacheExtraProperties"
+    }
+
+  ],
+  "properties": [
+    {
+      "name": "spring.redis.jodis.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable codis feature",
+      "sourceType": "org.springframework.boot.autoconfigure.data.redis.JodisProperties",
+      "defaultValue": "false"
+    },
+    {
+      "name": "spring.redis.jodis.connect-string",
+      "type": "java.lang.String",
+      "description": "Codis zookeeper connect string",
+      "sourceType": "org.springframework.boot.autoconfigure.data.redis.JodisProperties"
+    },
+    {
+      "name": "spring.redis.jodis.proxy-direction",
+      "type": "java.lang.String",
+      "description": "Codis zookeeper proxy direction",
+      "sourceType": "org.springframework.boot.autoconfigure.data.redis.JodisProperties"
+    },
+    {
+      "name": "spring.redis.jodis.session-timeout-ms",
+      "type": "java.lang.Integer",
+      "description": "Codis session timeout",
+      "sourceType": "org.springframework.boot.autoconfigure.data.redis.JodisProperties"
+    },
+    {
+      "name": "spring.redis.jodis.connection-timeout-ms",
+      "type": "java.lang.Integer",
+      "description": "Codis connection timeout",
+      "sourceType": "org.springframework.boot.autoconfigure.data.redis.JodisProperties"
+    },
+    {
+      "name": "spring.redis.jodis.so-timeout-ms",
+      "type": "java.lang.Integer",
+      "description": "Codis so timeout",
+      "sourceType": "org.springframework.boot.autoconfigure.data.redis.JodisProperties"
+    },
+    {
+      "name": "spring.redis.jodis.password",
+      "type": "java.lang.String",
+      "description": "Codis password",
+      "sourceType": "org.springframework.boot.autoconfigure.data.redis.JodisProperties"
+    },
+    {
+      "name": "spring.cache.redis.extra.expires",
+      "type": "java.util.Map",
+      "description": "Redis expiration configuration",
+      "sourceType": "org.springframework.boot.autoconfigure.cache.RedisCacheExtraProperties"
+    }
+  ],
+  "hints":[
+
+  ]
+}

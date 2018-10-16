@@ -1,0 +1,10 @@
+description '''spring-boot codis sample
+codis pool use RoundRobinJedisPool to connect redis proxy
+'''
+
+dependencies {
+    compile project(':springboot-starter-codis')
+    compile 'org.springframework.boot:spring-boot-starter-web'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}

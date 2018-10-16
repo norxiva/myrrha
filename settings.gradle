@@ -1,3 +1,8 @@
 rootProject.name = 'myrrha'
 include 'springboot-sample-devtools'
+include 'springboot-sample-codis'
+include 'springboot-starter-codis'
+include 'springboot-data-codis'
+include 'springboot-autoconfigure-codis'
+include 'springboot-sample-codis-cache'
 

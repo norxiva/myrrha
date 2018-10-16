@@ -1,0 +1,20 @@
+spring:
+  redis:
+    jodis:
+      enabled: true
+      connect-string: zk1-qa.yeshj.com:2181,zk2-qa.yeshj.com:2181,zk3-qa.yeshj.com:2181,zk4-qa.yeshj.com:2181,zk5-qa.yeshj.com:2181
+      proxy-direction: /zk/codis/db_QA/proxy
+      session-timeout-ms: 30000
+      connection-timeout-ms: 3000
+      so-timeout-ms: 15000
+    pool:
+      max-active: 80
+      min-idle: 8
+
+---
+spring:
+  cache:
+    cache-names: foe:my:test:hi
+    redis:
+      extra:
+        expires: {"foe:my:test:hi": 3}

@@ -22,9 +22,6 @@ allprojects {
     apply plugin: 'eclipse'
     apply plugin: 'maven'
 
-    apply plugin: 'io.spring.dependency-management'
-    apply plugin: 'org.springframework.boot'
-
     [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
     sourceCompatibility = '1.8'
     targetCompatibility = '1.8'
@@ -41,12 +38,17 @@ allprojects {
 }
 
 
+configure(subprojects) {
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
+}
 
-configure(subprojects.findAll() { it.name ==~ /springboot-sample.*/ }) {
+
+
+configure(subprojects.findAll() { it.name ==~ /springboot-.*/ }) {
     ext.platformBomVersion = 'Brussels-SR13'
     ext.springBootVersion = '1.5.16.RELEASE'
-//    ext.platformBomVersion = 'Cairo-SR4'
-//    ext.springBootVersion = '2.0.5.RELEASE'
+    ext.jodisVersion = '0.4.1'
 
     dependencyManagement {
         imports {

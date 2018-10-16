@@ -1,0 +1,7 @@
+dependencies {
+    compile project(':springboot-data-codis')
+
+//    compile 'org.springframework.boot:spring-boot-configuration-processor'
+
+    testCompile 'junit:junit'
+}

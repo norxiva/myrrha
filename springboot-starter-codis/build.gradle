@@ -1,0 +1,6 @@
+dependencies {
+    compile project(':springboot-autoconfigure-codis')
+    compile project(':springboot-data-codis')
+
+    compile 'org.springframework.boot:spring-boot-starter-data-redis'
+}

@@ -1,4 +1,4 @@
-description '''spring-boot devtools sample for 1.5.16
+description '''spring-boot devtools sample
 features:
 1. restart trigger file
 2. livereload of chrome

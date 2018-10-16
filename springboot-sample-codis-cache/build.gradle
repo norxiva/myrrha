@@ -1,0 +1,11 @@
+description '''spring-boot codis cache sample
+integrate sprinboot-starter-codis and spring-boot-starter-cache
+'''
+
+dependencies {
+    compile project(':springboot-starter-codis')
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-cache'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}

@@ -1,0 +1,9 @@
+dependencies {
+    compile 'org.projectlombok:lombok'
+    compile 'org.springframework.boot:spring-boot-starter-data-redis'
+    compile "io.codis.jodis:jodis:${jodisVersion}"
+
+    compile "commons-codec:commons-codec"
+
+    testCompile 'junit:junit'
+}
