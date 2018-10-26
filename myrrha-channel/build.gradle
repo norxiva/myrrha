@@ -1,0 +1,14 @@
+dependencies {
+    compile project(':myrrha-util')
+
+    compile files('lib/gnete-security-1.1.jar')
+    compile files('lib/gnete-bc-139.jar')
+
+    compile 'org.springframework.boot:spring-boot-starter'
+
+    compile 'org.apache.httpcomponents:httpclient'
+    compile 'org.freemarker:freemarker'
+    compile 'com.thoughtworks.xstream:xstream'
+
+    testCompile 'junit:junit'
+}

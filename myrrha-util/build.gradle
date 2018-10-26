@@ -1,0 +1,19 @@
+dependencies {
+    compile project(':myrrha-common')
+
+    compile 'org.bouncycastle:bcpkix-jdk15on',
+            'commons-io:commons-io',
+            'commons-codec:commons-codec',
+            'commons-beanutils:commons-beanutils',
+            'commons-collections:commons-collections',
+            'org.apache.commons:commons-lang3',
+            'com.google.guava:guava',
+
+            'com.fasterxml.jackson.core:jackson-core',
+            'com.fasterxml.jackson.core:jackson-databind',
+            'com.fasterxml.jackson.core:jackson-annotations',
+            'com.fasterxml.jackson.datatype:jackson-datatype-jsr310',
+            'com.fasterxml.jackson.datatype:jackson-datatype-jdk8',
+            'com.fasterxml.jackson.datatype:jackson-datatype-guava',
+            'com.fasterxml.jackson.dataformat:jackson-dataformat-csv'
+}

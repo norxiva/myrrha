@@ -43,6 +43,17 @@ configure(subprojects) {
     apply plugin: 'org.springframework.boot'
 }
 
+configure(subprojects.findAll() { it.name ==~ /myrrha-.*/ }) {
+    ext.platformBomVersion = 'Cairo-SR4'
+    ext.springBootVersion = '2.0.5.RELEASE'
+
+    dependencyManagement {
+        imports {
+            mavenBom "io.spring.platform:platform-bom:${platformBomVersion}"
+        }
+    }
+
+}
 
 
 configure(subprojects.findAll() { it.name ==~ /springboot-.*/ }) {

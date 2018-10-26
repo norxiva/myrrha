@@ -5,4 +5,7 @@ include 'springboot-starter-codis'
 include 'springboot-data-codis'
 include 'springboot-autoconfigure-codis'
 include 'springboot-sample-codis-cache'
+include 'myrrha-util'
+include 'myrrha-common'
+include 'myrrha-channel'
 
